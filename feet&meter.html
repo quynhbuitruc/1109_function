@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi giữa Feets và Meters</title>
+</head>
+
+<body>
+    <form>
+        <p>
+            <label> Meters </label>
+            <input id="inputMeters" type="number" placeholder="meters" oninput="convertMeetersToFeets(this.value)"
+                onchange="convertMeetersToFeets(this.value)">
+        </p>
+        <p>Feets: <span id="outputFeets"></span></p>
+
+        <p>
+            <label> Feets </label>
+            <input id="inputFeets" type="number" placeholder="feets" oninput="converterFeetsToMeters(this.value)"
+                onchange="converterFeetsToMeters(this.value)">
+        </p>
+        <p>Meters: <span id="outputFeets"></span></p>
+    </form>
+
+</body>
+
+</html>
