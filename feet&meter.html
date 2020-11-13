@@ -11,7 +11,7 @@
     <form>
         <p>
             <label> Meters </label>
-            <input id="inputMeters" type="number" placeholder="meters" oninput="convertMeetersToFeets(this.value)"
+            <input id="inputMeters" type="number" placeholder="meters" oninput="convertMetersToFeets(this.value)"
                 onchange="convertMeetersToFeets(this.value)">
         </p>
         <p>Feets: <span id="outputFeets"></span></p>
@@ -21,9 +21,20 @@
             <input id="inputFeets" type="number" placeholder="feets" oninput="converterFeetsToMeters(this.value)"
                 onchange="converterFeetsToMeters(this.value)">
         </p>
-        <p>Meters: <span id="outputFeets"></span></p>
+        <p>Meters: <span id="outputMeters"></span></p>
     </form>
 
+    <script>
+        function convertMetersToFeets(valNum1) {
+            valNum1 = parseFloat(valNum1);
+            document.getElementById("outputFeets").innerHTML = (3.279 * valNum1)
+        }
+
+        function converterFeetsToMeters(valNum2) {
+            valNum2 = parseFloat(valNum2);
+            document.getElementById("outputMeters").innerHTML = (0.305 * valNum2)
+        }
+    </script>
 </body>
 
 </html>
