@@ -16,6 +16,21 @@
             writePrimeNumbers(isPrime, d)
         }
 
+        function checkNumber(i, isPrime) {
+            for (let x = 2; x < i; x++) {
+                if (i % x == 0) {
+                    isPrime = false
+                    break
+                }
+            }
+            return isPrime
+        }
+
+        function writePrimeNumbers(isPrime, primeNmber) {
+            if (isPrime) {
+                document.getElementById("display").innerText += "\n" + primeNmber
+            }
+        }
     </script>
 </body>
 
